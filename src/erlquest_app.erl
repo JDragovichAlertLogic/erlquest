@@ -15,7 +15,8 @@ start(_Type, _Args) ->
     Dispatch = cowboy_router:compile([
             {'_', [
                     {"/", toppage_h, []},
-                    {"/rooms", task1, []}
+                    {"/rooms", task1, []},
+                    {"/messages/:room", task2, []}
             ]}
     ]),
     {ok, _} = cowboy:start_clear(http, [{port, 8080}], #{
