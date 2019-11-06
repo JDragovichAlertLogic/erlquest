@@ -1,6 +1,6 @@
 %% The module that handles room tasks
 
-%% @doc Task1 Handler.
+%% @doc Rooms Module.
 -module(rooms).
 
 -export([show_rooms/0, add_room/1]).

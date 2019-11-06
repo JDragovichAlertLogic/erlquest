@@ -20,6 +20,9 @@ check_method(<<"GET">>, Req0) ->
     get_messages(Messages);
 check_method(_Request, _Req0) -> {400, <<"Bad Request">>}.
 
-%% Write a function here that takes a list of messages and creates one large binary string separated by newlines
-%% each message is a tuple of strings like {"Users", "Message"}
-get_messages(Messages) -> {200, integer_to_binary(length(Messages))}.
+%% Write a function here that takes a list of messages and creates one large binary string separated by newlines (\n)
+%% each message is a tuple of strings like {<<"Users">>, <<"Message">>}
+get_messages(Messages) -> get_messages(<<"">>, Messages).
+get_messages(Acc, [{User, Message} | Messages]) ->
+    get_messages(list_to_binary([User, <<": ">>, Message, <<"\n">> | Acc]), Messages);
+get_messages(Acc, []) -> {200, Acc}.
