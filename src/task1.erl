@@ -17,4 +17,6 @@ init(Req0, Opts) ->
 %% When the string matches <<"POST">> returnthe add_room function from the rooms module.
 %% If the string is <<"GET">> return show_rooms from the same module.
 %% Otherwise return {400, <<"a clever bad request message">>}.
-check_method(_Method, _Req) -> {200, <<"Here is a placeholder">>}.
+check_method(<<"POST">>, Req0) -> rooms:add_room(Req0);
+check_method(<<"GET">>, _Req0) -> rooms:show_rooms();
+check_method(_Request, _Req0) -> {400, <<"Bad Request">>}.
