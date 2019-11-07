@@ -41,7 +41,11 @@ docker run -it --rm -v `pwd`:/erlquest -p 8080:8080 jdragovich1985/erlang-dev-fe
 All methods deal with plain text
 
 `ANY /` - Returns a welcome message
+
 `GET /rooms` - Returns a list of current rooms
+
 `POST /rooms` - Adds a room to teh DB
+
 `GET /messages/:room` - get all messages for a particular room
+
 `POST /messages/:room` - add a message to a particular room
