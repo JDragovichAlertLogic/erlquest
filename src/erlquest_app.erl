@@ -1,4 +1,4 @@
-%% The app files where we start the app and initalize the router
+%% The app files where we start the app and initialize the router
 
 %% @private
 -module(erlquest_app).

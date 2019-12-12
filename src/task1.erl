@@ -14,7 +14,7 @@ init(Req0, Opts) ->
     {ok, Req, Opts}.
 
 %% Write a function that takes two arguments, a binary string, and the request.
-%% When the string matches <<"POST">> returnthe add_room function from the rooms module.
-%% If the string is <<"GET">> return show_rooms from the same module.
+%% When the string matches <<"POST">> return the output of the add_room function from the rooms module.
+%% If the string is <<"GET">> return the output of the show_rooms from the same module.
 %% Otherwise return {400, <<"a clever bad request message">>}.
 check_method(_Method, _Req) -> {200, <<"Here is a placeholder">>}.
