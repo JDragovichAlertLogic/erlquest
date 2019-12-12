@@ -1,5 +1,5 @@
 {application, erlquest, [
-    {description, "demo aapp for Devfest 2019"},
+    {description, "demo app for Devfest 2019"},
     {vsn, git},
     {registered, [ ]},
     {applications, [

@@ -8,13 +8,13 @@ Pull this repository and navigate to the project root.
 git clone git@github.com:JDragovichAlertLogic/erlquest.git
 cd erlquest
 ```
-Run the inlcuded start script to start the application
+Run the included start script to start the application
 ```
 ./start.sh
 ```
 If the shell script isnt working for you, try [running it manually](#markdown-header-running-it-manually).
 
-Once the shell is running, runn the following commands in the shell to start hot code reloading and start the application. 
+Once the shell is running, run the following commands in the shell to start hot code reloading and start the application.
 
 ```erlang
 sync:start().
@@ -44,7 +44,7 @@ All methods deal with plain text
 
 `GET /rooms` - Returns a list of current rooms
 
-`POST /rooms` - Adds a room to teh DB
+`POST /rooms` - Adds a room to the DB
 
 `GET /messages/:room` - get all messages for a particular room
 
